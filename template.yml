@@ -3,6 +3,21 @@ Transform: 'AWS::Serverless-2016-10-31'
 Description: >
   This serverless app sets up the CI infrastructure for a GitHub-based SAM python project.
 
+Metadata:
+  AWS::ServerlessRepo::Application:
+    Name: python-sam-codebuild-ci
+    Description: >
+      This serverless app sets up an AWS CodeBuild Project as a CI solution for a GitHub-based SAM python project. Once setup, everytime you
+      push to your GitHub repository, CodeBuild will kick off a build verifying your latest changes.
+    Author: James Hood
+    SpdxLicenseId: MIT
+    LicenseUrl: LICENSE
+    ReadmeUrl: README.md
+    Labels: [github, python, ci, codebuild, continuous-integration, sam]
+    HomepageUrl: https://github.com/jlhood/python-sam-codebuild-ci
+    SemanticVersion: 1.1.0
+    SourceCodeUrl: https://github.com/jlhood/python-sam-codebuild-ci/tree/1.1.0
+
 Parameters:
   GitHubOwner:
     Description: GitHub username owning the repo
@@ -103,6 +118,16 @@ Resources:
         Rules:
         - ExpirationInDays: 30
           Status: Enabled
+
+  PRBuildLogs:
+    Type: AWS::Serverless::Application
+    Properties:
+      Location:
+        ApplicationId: arn:aws:serverlessrepo:us-east-1:277187709615:applications/github-codebuild-logs
+        SemanticVersion: 1.0.0
+      Parameters:
+        # Name of CodeBuild project this app is posting logs for.
+        CodeBuildProjectName: !Ref Project
 
 Outputs:
   ProjectName:
