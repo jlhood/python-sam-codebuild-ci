@@ -15,8 +15,8 @@ Metadata:
     ReadmeUrl: README.md
     Labels: [github, python, ci, codebuild, continuous-integration, sam]
     HomePageUrl: https://github.com/jlhood/python-sam-codebuild-ci
-    SemanticVersion: 1.1.0
-    SourceCodeUrl: https://github.com/jlhood/python-sam-codebuild-ci/tree/1.1.0
+    SemanticVersion: 1.2.0
+    SourceCodeUrl: https://github.com/jlhood/python-sam-codebuild-ci/tree/1.2.0
 
 Parameters:
   GitHubOwner:
@@ -40,7 +40,7 @@ Parameters:
   PythonVersion:
     Description: Python version of image used by AWS CodeBuild. See the documentation for details (https://docs.aws.amazon.com/codebuild/latest/userguide/create-project.html#create-project-cli).
     Type: String
-    Default: 3.6.5
+    Default: 3.7.1
   EnvironmentType:
     Description: Environment type used by AWS CodeBuild. See the documentation for details (https://docs.aws.amazon.com/codebuild/latest/userguide/create-project.html#create-project-cli).
     Type: String

@@ -36,7 +36,7 @@ The app has the following parameters:
 1. `GitHubRepo` (required) - GitHub repo name (just the name, not the full URL).
 1. `GitHubOAuthToken` (required) - OAuth token used by AWS CodeBuild to connect to GitHub.
 1. `ComputeType` (optional) - AWS CodeBuild project compute type to use. See [the documentation] (https://docs.aws.amazon.com/codebuild/latest/userguide/create-project.html#create-project-cli) for details. Default: BUILD_GENERAL1_SMALL
-1. `PythonVersion` (optional) - Python version of image used by AWS CodeBuild. See [the documentation] (https://docs.aws.amazon.com/codebuild/latest/userguide/create-project.html#create-project-cli) for details. Default: 3.6.5
+1. `PythonVersion` (optional) - Python version of image used by AWS CodeBuild. See [the documentation] (https://docs.aws.amazon.com/codebuild/latest/userguide/create-project.html#create-project-cli) for details. Default: 3.7.1
 1. `EnvironmentType` (optional) - Environment type used by AWS CodeBuild. See [the documentation] (https://docs.aws.amazon.com/codebuild/latest/userguide/create-project.html#create-project-cli) for details. Default: LINUX_CONTAINER
 
 ## App Outputs
