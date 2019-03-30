@@ -15,8 +15,8 @@ Metadata:
     ReadmeUrl: README.md
     Labels: [github, python, ci, codebuild, continuous-integration, sam]
     HomePageUrl: https://github.com/jlhood/python-sam-codebuild-ci
-    SemanticVersion: 1.2.3
-    SourceCodeUrl: https://github.com/jlhood/python-sam-codebuild-ci/tree/1.2.3
+    SemanticVersion: 1.2.4
+    SourceCodeUrl: https://github.com/jlhood/python-sam-codebuild-ci/tree/1.2.4
 
 Parameters:
   GitHubOwner:
@@ -124,7 +124,7 @@ Resources:
     Properties:
       Location:
         ApplicationId: arn:aws:serverlessrepo:us-east-1:277187709615:applications/github-codebuild-logs
-        SemanticVersion: 1.0.1
+        SemanticVersion: 1.0.3
       Parameters:
         # Name of CodeBuild project this app is posting logs for.
         CodeBuildProjectName: !Ref Project
