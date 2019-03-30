@@ -124,7 +124,7 @@ Resources:
     Properties:
       Location:
         ApplicationId: arn:aws:serverlessrepo:us-east-1:277187709615:applications/github-codebuild-logs
-        SemanticVersion: 1.0.3
+        SemanticVersion: 1.0.4
       Parameters:
         # Name of CodeBuild project this app is posting logs for.
         CodeBuildProjectName: !Ref Project
