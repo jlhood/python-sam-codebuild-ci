@@ -110,6 +110,13 @@ Resources:
             Resource:
             - !Sub arn:${AWS::Partition}:s3:::${Artifacts}
             - !Sub arn:${AWS::Partition}:s3:::${Artifacts}/*
+          - Effect: Allow
+            Action:
+            # permissions needed by sam build if app contains nested apps
+            - "serverlessrepo:GetApplication"
+            - "serverlessrepo:CreateCloudFormationTemplate"
+            - "serverlessrepo:GetCloudFormationTemplate"
+            Resource: *
 
   Artifacts:
     Type: AWS::S3::Bucket
