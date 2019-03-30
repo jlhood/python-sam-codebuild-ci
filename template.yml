@@ -116,7 +116,7 @@ Resources:
             - "serverlessrepo:GetApplication"
             - "serverlessrepo:CreateCloudFormationTemplate"
             - "serverlessrepo:GetCloudFormationTemplate"
-            Resource: *
+            Resource: '*'
 
   Artifacts:
     Type: AWS::S3::Bucket
